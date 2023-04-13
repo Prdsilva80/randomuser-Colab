@@ -20,6 +20,16 @@ ul {
   padding: 1rem;
 }
 
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
 li {
   display: flex;
   align-items: center;

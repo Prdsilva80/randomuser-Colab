@@ -6,10 +6,15 @@ type User = {
     first: string;
     last: string;
   };
+  gender: string;
+  location: {
+    country: string;
+  };
   picture: {
     thumbnail: string;
   };
 };
+
 
 const UserList: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -24,12 +29,17 @@ const UserList: React.FC = () => {
     <div>
       <h1>Lista de Usuários</h1>
       <ul>
-        {users.map((user, index) => (
-          <li key={index}>
-            <img src={user.picture.thumbnail} alt={user.name.first} />
-            {user.name.first} {user.name.last}
-          </li>
-        ))}
+      {users.map((user, index) => (
+  <li key={index}>
+    <img src={user.picture.thumbnail} alt={user.name.first} />
+    <div>
+      <p>{user.name.first} {user.name.last},</p>
+      <p>{user.gender},</p>
+      <p>{user.location.country}</p>
+    </div>
+  </li>
+))}
+
       </ul>
     </div>
   );
