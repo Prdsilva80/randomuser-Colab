@@ -2,7 +2,7 @@
 
 ## Descrição do desafio proposto pela empresa [Colab.re](https://www.colab.re/)
 
-- Esse teste, ele tem um único objetivo, resolver o seguinte problema: “Listar os usuários e seus detalhes em uma interface web”
+- Esse teste tem um único objetivo, resolver o seguinte problema: “Listar os usuários e seus detalhes em uma interface web”
 - Não foi solicitado o uso de nenhuma tecnologia específica. Liberdade para personalizar o projeto
 - Foi feita apenas a indicação de qual API a ser utilizada [randomuser.me](https://randomuser.me/)
 
