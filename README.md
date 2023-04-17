@@ -37,6 +37,10 @@
 ```
 git clone randomuser-Colab
 ```
+Baixe as dependências do projeto
+```
+npm create vite@latest
+```
 - Após baixar e abrir o projeto em sua máquina, digite no terminal o comando:
 ```
 npm rum dev
