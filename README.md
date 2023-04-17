@@ -35,7 +35,7 @@
 
 - Digite esses comandos no terminal do vscode:
 ```
-git clone randomuser-Colab
+gh repo clone Prdsilva80/randomuser-Colab
 ```
 Baixe as dependências do projeto
 ```
