@@ -33,13 +33,13 @@
 
 ## Como ver o projeto em funcionamento
 
-- Faça um clone do projeto:
+- Digite esses comandos no terminal do vscode:
 ```
-git clone randomuser-Colab
+gh repo clone Prdsilva80/randomuser-Colab
 ```
 Baixe as dependências do projeto
 ```
-npm create vite@latest
+npm init
 ```
 - Após baixar e abrir o projeto em sua máquina, digite no terminal o comando:
 ```
