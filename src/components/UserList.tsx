@@ -45,12 +45,13 @@ const UserList: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get<{ results: User[] }>("https://randomuser.me/api/?results=10")
+    .get<{ results: User[] }>("http://localhost:3001/api/users")
       .then((response) => {
         setUsers(response.data.results);
       });
   }, []);
 
+  console.log(users);
   return (
     <div className="user-list">
       <h1>Lista de Usuários</h1>
