@@ -39,25 +39,26 @@ type User = {
   };
 };
 
-
 const UserList: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
     axios
-    .get<{ results: User[] }>("https://randomuser.me/api/?results=10")
+      .get<{ results: User[] }>("https://randomuser.me/api/?results=10")
       .then((response) => {
         setUsers(response.data.results);
+      })
+      .catch((error) => {
+        console.log("Failed to fetch users:", error);
       });
   }, []);
 
-  console.log(users);
   return (
     <div className="user-list">
       <h1>Lista de Usuários</h1>
       <div className="user-card-list">
-        {users.map((user, index) => (
-          <div key={index} className="user-card">
+        {users.map((user) => (
+          <div key={user.login.username} className="user-card">
             <div className="user-avatar">
               <img src={user.picture.medium} alt={user.name.first} />
             </div>
