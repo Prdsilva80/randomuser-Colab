@@ -10,26 +10,19 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,nodejs,vite,react,typescript,html,css,git,github" />
+    <img src="https://skillicons.dev/icons?i=vscode,nodejs,vite,react,typescript,html,css,git,github,postman" />
   </a>
 </p>
 
 ## O que o código faz
 
-- O módulo "react" é importado, juntamente com os hooks useState e useEffect.
-- O módulo "axios" é importado para realizar uma chamada à API externa.
-- O tipo User é definido como um objeto que possui campos como name, gender, location e picture, e cada campo tem seu próprio tipo.
-- Foi definido um componente funcional React chamado UserList, que não recebe props externas (React.FC sem genéricos).
-- Existe um estado inicial que é criado usando o hook useState, com um array de usuários vazio.
-- Foi utilizado o hook useEffect para realizar uma chamada à API externa no momento em que o componente é montado na tela (array de dependências vazio []).
-- É feita uma chamada GET para a API externa usando o módulo "axios".
-- O resultado da chamada é definido no estado dos usuários usando o setUsers.
-- A função de retorno do componente é definida, que renderiza um título "Lista de Usuários" e uma lista de usuários.
-- É utilizado o método map para iterar sobre o array de usuários e renderizar um elemento.
-- No código é definido um atributo chave para o elemento, que é definido como o índice do elemento no array.
-- No código é renderizada a imagem do usuário com a propriedade src definida como o valor do campo thumbnail do objeto picture do usuário.
-- No código também são renderizados os campos name, gender, email, adress e location do usuário.
-- Por fim, o componente UserList é exportado como padrão para ser usado em outros módulos.
+- Os códigos construídos implementam uma aplicação de backend e frontend para exibir informações de usuários.
+
+- O primeiro código backend é um servidor Node.js que cria uma API REST simples para retornar uma lista de usuários. Ele usa o Express.js para gerenciar as rotas HTTP. Quando uma solicitação GET é feita para '/api/users', ele retorna uma lista de dois usuários com seus dados pessoais, incluindo nome, gênero, localização, endereço de e-mail, nome de usuário, senha e informações de imagem.
+
+- O segundo código backend é semelhante ao primeiro, mas adiciona a funcionalidade do middleware CORS (Cross-Origin Resource Sharing) que permite que a API seja acessada por outros domínios. Ele também adiciona uma linha de código para imprimir no console sempre que um usuário faz uma solicitação GET para '/api/users'.
+
+- O terceiro código frontend é um componente React que usa o pacote Axios para fazer uma solicitação GET para a API do segundo código. Quando a lista de usuários é recuperada com sucesso, ele armazena os usuários no estado e exibe seus nomes em uma tabela. Ele usa os Hooks useState e useEffect do React para gerenciar o estado e realizar efeitos secundários.
 
 ## Como ver o projeto em funcionamento
 
@@ -43,9 +36,10 @@ npm init
 ```
 - Após baixar e abrir o projeto em sua máquina, digite no terminal o comando:
 ```
-npm rum dev
+npm start
 ```
 - Copie o link do localhost em sua barra de endereço, e veja o projeto funcionando.
+- Sempre que a página é atualizada, ela traz uma nova lista.
 ---
 
 ## Sobre o desafio, e o que eu achei
