@@ -45,7 +45,7 @@ const UserList: React.FC = () => {
 
   useEffect(() => {
     axios
-    .get<{ results: User[] }>("http://localhost:3001/api/users")
+    .get<{ results: User[] }>("https://randomuser.me/api/?results=10")
       .then((response) => {
         setUsers(response.data.results);
       });
